@@ -38,7 +38,7 @@ class Robot():
 
     def stop(self):
         if self.__power == True:
-            if input("voulez vous vous areter? si oui écrivé stop \n") == "stop":
+            if input("voulez vous vous areter? si oui ecrit stop \n") == "stop":
                 self.__current_speed = 0
 
                 print("arret reussi, vitesse actuel  ",r1.getCurrentSpeed(), "km/h \n\n")
