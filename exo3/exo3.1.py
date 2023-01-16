@@ -30,21 +30,21 @@ class UnderseaVehicule():
     def do_something_things_undeesea(self):
         print("annuler la mission")
 
-class UAV(UnmannedVehicule,AerialVehicule,metaclass=ABCMeta):
+class UAV(UnmannedVehicule,AerialVehicule):
     """Unmanned Aerial Vehicule"""
     def do_something_interesting(self):
         print("depart vol")
     def do_other_things(self):
         print("mayday mayday")
 
-class UUV(UnmannedVehicule,UnderseaVehicule,metaclass=ABCMeta):
+class UUV(UnmannedVehicule,UnderseaVehicule):
     """Unmanned Undersea Vehicule"""
     def do_something_interesting(self):
         print("plonger")
     def do_other_things(self):
         print("fuite")
 
-class UGV(UnmannedVehicule,GroundVehicule,metaclass=ABCMeta):
+class UGV(UnmannedVehicule,GroundVehicule):
     """Unmanned Ground Vehicule"""
     def do_something_interesting(self):
         print("rouler")
