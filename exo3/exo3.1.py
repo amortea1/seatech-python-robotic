@@ -1,6 +1,9 @@
 from abc import ABCMeta, abstractmethod
 
 class UnmannedVehicule():
+
+    _name="DEFAULT"
+    
     """  An autonomous vehicle have to do his mission automatically.
     This mission can be configured by an operator. """
     @abstractmethod
