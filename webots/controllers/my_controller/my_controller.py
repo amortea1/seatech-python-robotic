@@ -1,8 +1,17 @@
 """my_controller controller."""
+#include <math.h>
+#include <stdio.h>
+#include <webots/compass.h>
+#include <webots/gps.h>
+#include <webots/keyboard.h>
+#include <webots/motor.h>
+#include <webots/robot.h>
+
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
+#doit ajouter l'option Robot souligner
 
 # create the Robot instance.
 robot = Robot()
