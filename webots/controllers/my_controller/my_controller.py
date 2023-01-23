@@ -7,6 +7,7 @@
 #include <webots/motor.h>
 #include <webots/robot.h>
 from move import move
+""" from camera import EpuckCamera """
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
@@ -92,7 +93,8 @@ while robot.step(timestep) != -1:
 
     
 
-    robot.Front()
+    robot.run()
+    
     
 
     # Read the sensors:
