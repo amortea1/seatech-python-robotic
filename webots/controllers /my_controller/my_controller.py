@@ -90,11 +90,11 @@ def Left():
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
-while move.step(timestep) != -1:
+while robot.step(timestep) != -1:
 
     
 
-    move.Right()
+    robot.Right()
     
 
     # Read the sensors:
