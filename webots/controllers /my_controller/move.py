@@ -10,7 +10,7 @@ class move(Robot):
 
     timestep = 64
     max_speed=65
-
+    robot = Robot()
 
     Front_left_wheel = robot.getDevice('front right wheel motor')
     Front_right_wheel= robot.getDevice('front left wheel motor')
