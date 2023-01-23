@@ -6,19 +6,22 @@
 #include <webots/keyboard.h>
 #include <webots/motor.h>
 #include <webots/robot.h>
-
+from move import move 
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
-from controller import Robot, Motor, PositionSensor
+#from controller import Robot, Motor, PositionSensor
 #doit ajouter l'option Robot souligner
 
 # create the Robot instance.
-robot = Robot()
+robot = move()
 
 # get the time step of the current world.
 #timestep = int(robot.getBasicTimeStep())
+
 timestep = 64
+max_speed=65
+""" timestep = 64
 max_speed=65
 
 
@@ -76,7 +79,7 @@ def Left():
     Rear_left_wheel.setVelocity(Rear_left_speed)
     Rear_right_wheel.setVelocity(Rear_right_speed)
 
-
+ """
 # You should insert a getDevice-like function in order to get the
 # instance of a device of the robot. Something like:
 #  motor = robot.getDevice('motorname')
@@ -87,11 +90,13 @@ def Left():
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
-while robot.step(timestep) != -1:
+while move.step(timestep) != -1:
 
     
 
     Right()
+    Left() 
+    Front()
 
     # Read the sensors:
     # Enter here functions to read sensor data, like:
