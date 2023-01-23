@@ -94,9 +94,8 @@ while move.step(timestep) != -1:
 
     
 
-    Right()
-    Left() 
-    Front()
+    move.Right()
+    
 
     # Read the sensors:
     # Enter here functions to read sensor data, like:
