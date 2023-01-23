@@ -7,6 +7,7 @@ from camera import Camera1
 
 
 
+
 class move(Robot):
 
 
@@ -14,6 +15,7 @@ class move(Robot):
     def __init__(self):
         super().__init__()
         camera=Camera1()
+        
         self.imestep = 64
         self.max_speed=6
 
