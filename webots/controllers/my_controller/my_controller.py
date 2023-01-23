@@ -21,10 +21,10 @@ robot = Robot()
 timestep = 64
 
 
-Front_left_wheel = robot.getMotor('front right wheel motor')
-Front_right_wheel= robot.getMotor('front left wheel motor')
-Rear_left_wheel = robot.getMotor('rear left wheel motor')
-Rear_right_wheel = robot.getMotor('rear right wheel motor')
+Front_left_wheel = robot.getDevice('front right wheel motor')
+Front_right_wheel= robot.getDevice('front left wheel motor')
+Rear_left_wheel = robot.getDevice('rear left wheel motor')
+Rear_right_wheel = robot.getDevice('rear right wheel motor')
 
 Front_left_wheel.setPosition(float('inf'))
 Front_left_wheel.setVelocity(0.0)
