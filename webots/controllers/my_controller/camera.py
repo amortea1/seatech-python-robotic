@@ -9,3 +9,4 @@ class Camera1(Camera):
     def __init__(self):
         super().__init__('camera rgb')
         self.enable(CAMERA_SAMPLING_PERIOD)
+
