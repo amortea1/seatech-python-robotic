@@ -13,11 +13,12 @@ class Camera1(Camera):
     
     #def getValue(self):
         #print(self.__array) """
+    
 
         #""" self.getImage() """
         #""" self.getImageArray() ""
-        #self.getImage()
-        #return self.getImageArray()
+        # self.getImage()
+        # return self.getImageArray()
 
 class Camera2(RangeFinder):
     def __init__(self):
@@ -30,9 +31,9 @@ class Camera2(RangeFinder):
         
     def is_on_edge(self):
         view = self.getRangeImageArray()
-        on_edge = False
-        print(view)
-        one 
+        on_edge = True
+        # print(view)
+         
         for pix in view:
             pass
 

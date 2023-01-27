@@ -1,10 +1,11 @@
 from controller import Robot, Motor, PositionSensor
 
 
-
+from lidar import Lidar_Controller
 from camera import Camera1
 from camera import Camera2
 from distance import EpuckDistanceSensor
+from gps import Gps_controller
 
 
 class MyRobot(Robot):
@@ -15,8 +16,9 @@ class MyRobot(Robot):
         super().__init__()
 
         self.camera_rgb=Camera1()
-
+        self.lidar=Lidar_Controller(self)
         self.camera_dist=Camera2()
+        self.gps=Gps_controller(self)
 
         self.distance=EpuckDistanceSensor('front left distance sensor')
         
@@ -64,11 +66,11 @@ class MyRobot(Robot):
         """Go backward"""
 
     def run(self):
-        if not self.camera_dist.is_on_edge():
-            self.forward()
-        else:
-            self.backward()
-
+        # if not self.camera_dist.is_on_edge():
+        #     self.forward()
+        # else:
+        #     self.backward()
+        self.forward()
 
     """ ef Right():
         Front_left_speed= 1.5*max_speed
