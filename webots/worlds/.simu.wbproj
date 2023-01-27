@@ -8,5 +8,5 @@ orthographicViewHeight: 1
 textFiles: 1 "controllers/my_controller/my_controller.py" "protos/Rosbot.proto"
 globalOptionalRendering: CameraFrustums
 consoles: Console:All:All
-renderingDevicePerspectives: Rosbot:camera depth;0;0.504599;0;0.434705
-renderingDevicePerspectives: Rosbot:camera rgb;0;0.65;0;0;59;349;416;312;0
+renderingDevicePerspectives: Rosbot:camera depth;1;0.389012;0;0.563135
+renderingDevicePerspectives: Rosbot:camera rgb;1;0.65;0;0

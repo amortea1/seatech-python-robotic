@@ -7,18 +7,18 @@ from camera import Camera2
 from distance import EpuckDistanceSensor
 
 
-class move(Robot):
+class MyRobot(Robot):
 
 
 
     def __init__(self):
         super().__init__()
 
-        camera=Camera1()
+        self.camera_rgb=Camera1()
 
-        camera=Camera2()
+        self.camera_dist=Camera2()
 
-        distance=EpuckDistanceSensor('front left distance sensor')
+        self.distance=EpuckDistanceSensor('front left distance sensor')
         
         self.imestep = 64
         self.max_speed=6
@@ -64,7 +64,10 @@ class move(Robot):
         """Go backward"""
 
     def run(self):
-        self.forward()
+        if not self.camera_dist.is_on_edge():
+            self.forward()
+        else:
+            self.backward()
 
 
     """ ef Right():

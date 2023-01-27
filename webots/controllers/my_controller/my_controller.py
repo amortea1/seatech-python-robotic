@@ -6,7 +6,7 @@
 #include <webots/keyboard.h>
 #include <webots/motor.h>
 #include <webots/robot.h>
-from move import move
+from move import MyRobot
 """ from camera import EpuckCamera """
 
 # You may need to import some classes of the controller module. Ex:
@@ -15,7 +15,7 @@ from move import move
 #doit ajouter l'option Robot souligner
 
 # create the Robot instance.
-robot = move()
+robot = MyRobot()
 
 # get the time step of the current world.
 #timestep = int(robot.getBasicTimeStep())
