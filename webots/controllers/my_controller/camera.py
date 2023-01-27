@@ -11,13 +11,13 @@ class Camera1(Camera):
         super().__init__('camera rgb')
         self.enable(CAMERA_SAMPLING_PERIOD)
     
-    def getValue(self):
+    #def getValue(self):
         #print(self.__array) """
 
         #""" self.getImage() """
         #""" self.getImageArray() """
-        self.getImage()
-        return self.getImageArray()
+        #self.getImage()
+        #return self.getImageArray()
 
 class Camera2(RangeFinder):
     def __init__(self):
@@ -29,7 +29,7 @@ class Camera2(RangeFinder):
         self.__minheight=self.getHeight()
         
     def is_on_edge(self):
-        view = self.getImageArray()
+        view = self.getRangeImageArray()
         on_edge = False
         print(view)
         for pix in view:

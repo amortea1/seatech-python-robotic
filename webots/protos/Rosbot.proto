@@ -21,7 +21,7 @@ PROTO Rosbot [
   field  SFString    customData      ""        # Is `Robot.customData`.
   field  SFBool      supervisor      FALSE     # Is `Robot.supervisor`.
   field  SFBool      synchronization TRUE      # Is `Robot.synchronization`.
-  field  SFBool      selfCollision   TRUE     # Is `Robot.selfCollision`.
+  field  SFBool      selfCollision   FALSE     # Is `Robot.selfCollision`.
   field  MFNode      cameraSlot      [ Astra { name "camera" } ] # Extends the robot with an Astra RGBD camera.
   field  MFNode      lidarSlot       [ RpLidarA2 { name "lidar" } ] # Extends the robot with a RpLidar A2 lidar.
 ]
