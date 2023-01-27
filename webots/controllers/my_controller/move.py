@@ -3,6 +3,7 @@ from controller import Robot, Motor, PositionSensor
 
 
 from camera import Camera1
+from camera import Camera2
 from distance import EpuckDistanceSensor
 
 
@@ -12,9 +13,12 @@ class move(Robot):
 
     def __init__(self):
         super().__init__()
-        camera=Camera1()
-        distance=EpuckDistanceSensor('front left distance sensor')
 
+        camera=Camera1()
+
+        camera=Camera2()
+
+        distance=EpuckDistanceSensor('front left distance sensor')
         
         self.imestep = 64
         self.max_speed=6
