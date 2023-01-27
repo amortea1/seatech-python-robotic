@@ -15,7 +15,7 @@ class Camera1(Camera):
         #print(self.__array) """
 
         #""" self.getImage() """
-        #""" self.getImageArray() """
+        #""" self.getImageArray() ""
         #self.getImage()
         #return self.getImageArray()
 
