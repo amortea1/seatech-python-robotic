@@ -32,6 +32,7 @@ class Camera2(RangeFinder):
         view = self.getRangeImageArray()
         on_edge = False
         print(view)
+        one 
         for pix in view:
             pass
 
