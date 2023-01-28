@@ -72,6 +72,7 @@ class MyRobot(Robot):
         #     self.backward()
         self.forward()
         print(self.gps.position)
+        
 
     """ ef Right():
         Front_left_speed= 1.5*max_speed

@@ -6,7 +6,7 @@
 #include <webots/keyboard.h>
 #include <webots/motor.h>
 #include <webots/robot.h>
-from move import MyRobot
+from Rebot import MyRobot
 """ from camera import EpuckCamera """
 
 # You may need to import some classes of the controller module. Ex:
