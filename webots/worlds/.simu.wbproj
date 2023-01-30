@@ -5,7 +5,7 @@ sceneTreePerspectives: 000000ff00000001000000030000001f000000c0000000fa010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/my_controller/my_controller.py"
+textFiles: 1 "controllers/my_controller/my_controller.py" "protos/Rosbot.proto"
 globalOptionalRendering: CameraFrustums::LidarPointClouds
 consoles: Console:All:All
 renderingDevicePerspectives: Rosbot:camera depth;1;0.425;0;0
