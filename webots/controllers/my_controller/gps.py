@@ -14,12 +14,12 @@ class Gps_controller(GPS):
     def position(self):
         return self.getValues()
 
-    # @property
-    # def coordinate_system(self) -> int:
-    #     return self.gps.getCoordinateSystem()
+    @property
+    def coordinate_system(self) -> int:
+        return self.getCoordinateSystem()
 
     def getCoordinates(self):
-        return self.getValues()
+         return self.getValues()
 
     # @staticmethod
-    # def convertToDegreesMinutesSeconds(decimalDegree):
+    # def convertToDegreesMinutesSeconds(decimalDegree)

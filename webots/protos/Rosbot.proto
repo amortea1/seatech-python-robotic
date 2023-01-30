@@ -494,7 +494,7 @@ PROTO Rosbot [
           }
           physics DEF WHEEL_PHYSICS Physics {
             density -1
-            mass 0.500000
+            mass 300.500000
           }
         }
       }
@@ -689,7 +689,7 @@ PROTO Rosbot [
           children [
             Box {
               size 0.040000 0.023000 0.065000
-            }
+            }s
           ]
         }
         DEF RIGHT_SUPPORT_LEG_BOX Transform {
@@ -714,7 +714,7 @@ PROTO Rosbot [
     }
     physics Physics {
       density -1
-      mass 0.450000
+      mass 300.450000
     }
   }
 }

@@ -47,8 +47,8 @@ class MyRobot(Robot):
 
     def Front(self):
         self.Front_left_speed= 1.5*self.max_speed
-        self.Front_right_speed = 1.2*self.max_speed
-        self.Rear_left_speed = 1.2*self.max_speed
+        self.Front_right_speed = 1.1*self.max_speed
+        self.Rear_left_speed = 1.1*self.max_speed
         self.Rear_right_speed = 1.5*self.max_speed
 
 
@@ -88,19 +88,27 @@ class MyRobot(Robot):
         self.Front()
 
     def backward(self):
-        """Go backward"""
+        """Go backward# print(self.gps.position)
+        # print(self.gps.coordinate_system)"""
 
     def run(self):
-        
+
+        # if self.camera_dist.detect_void():
+        #     self.stop()
+        # else:
+        #     self.forward()
         self.forward()
+
+
+
         print(self.gps.position)
-        print(self.gps.coordinate_system)
+        # print(self.gps.coordinate_system)
         
         
 
         
 
-    """ ef Right():
+    """ def Right():
         Front_left_speed= 1.5*max_speed
         Front_right_speed = -1.5*max_speed
         Rear_left_speed = -1.5*max_speed

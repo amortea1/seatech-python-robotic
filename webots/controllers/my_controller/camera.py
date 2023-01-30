@@ -29,13 +29,12 @@ class Camera2(RangeFinder):
         self.__minwith=self.getWidth()
         self.__minheight=self.getHeight()
         
-    def is_on_edge(self):
-        view = self.getRangeImageArray()
-        on_edge = True
-        # print(view)
-         
-        for pix in view:
-            pass
+    def detect_void(self):
+        matrix = RangeFinder.getRangeImage(self.__maxrenge)
+        if matrix[50000]== float('inf'):
+            return True
+        else:
+            return False
 
         # traitement ... on_edge = True/False
         
