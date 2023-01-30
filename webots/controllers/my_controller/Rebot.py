@@ -1,4 +1,5 @@
 from controller import Robot, Motor, PositionSensor
+from controller import GPS
 
 
 from lidar import Lidar_Controller
@@ -18,7 +19,7 @@ class MyRobot(Robot):
         self.camera_rgb=Camera1()
         self.lidar=Lidar_Controller(self)
         self.camera_dist=Camera2()
-        self.gps=Gps_controller(self)
+        self.gps=Gps_controller('gps', self.getBasicTimeStep())
 
         self.distance=EpuckDistanceSensor('front left distance sensor')
         
@@ -42,14 +43,12 @@ class MyRobot(Robot):
         self.Rear_right_wheel.setPosition(float('inf'))
         self.Rear_right_wheel.setVelocity(0.0)
 
-        
-
-        
+    
 
     def Front(self):
         self.Front_left_speed= 1.5*self.max_speed
-        self.Front_right_speed = 1.5*self.max_speed
-        self.Rear_left_speed = 1.5*self.max_speed
+        self.Front_right_speed = 1.2*self.max_speed
+        self.Rear_left_speed = 1.2*self.max_speed
         self.Rear_right_speed = 1.5*self.max_speed
 
 
@@ -57,6 +56,32 @@ class MyRobot(Robot):
         self.Front_right_wheel.setVelocity(self.Front_right_speed)
         self.Rear_left_wheel.setVelocity(self.Rear_left_speed)
         self.Rear_right_wheel.setVelocity(self.Rear_right_speed)
+
+    def stop(self):
+        self.Front_left_speed= 0*self.max_speed
+        self.Front_right_speed = 0*self.max_speed
+        self.Rear_left_speed = 0*self.max_speed
+        self.Rear_right_speed = 0*self.max_speed
+
+
+        self.Front_left_wheel.setVelocity(self.Front_left_speed)
+        self.Front_right_wheel.setVelocity(self.Front_right_speed)
+        self.Rear_left_wheel.setVelocity(self.Rear_left_speed)
+        self.Rear_right_wheel.setVelocity(self.Rear_right_speed)
+
+    # def controlgps(self):
+            
+    #     Coordinates=self.getValues()
+    #     long=[]
+
+    # def bord(self):
+    #     border={
+    #             "left":-3.5,
+    #             "right":3.5,
+    #             "front":3.5,
+    #             "back":-3.5
+    #     }
+    #     limit=0.3
 
     def forward(self):
         """Go forward"""
@@ -66,12 +91,13 @@ class MyRobot(Robot):
         """Go backward"""
 
     def run(self):
-        # if not self.camera_dist.is_on_edge():
-        #     self.forward()
-        # else:
-        #     self.backward()
+        
         self.forward()
         print(self.gps.position)
+        print(self.gps.coordinate_system)
+        
+        
+
         
 
     """ ef Right():

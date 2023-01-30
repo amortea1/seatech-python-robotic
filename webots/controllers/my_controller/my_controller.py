@@ -60,7 +60,7 @@ def Left():
     Front_right_speed = 1.5*max_speed
     Rear_left_speed = 1.5*max_speed
     Rear_right_speed =-1.5*max_speed
-    Front_left_wheel.setVelocity(Front_left_speed)
+    Front_left_whee #     test=Falsel.setVelocity(Front_left_speed)
     Front_right_wheel.setVelocity(Front_right_speed)
     Rear_left_wheel.setVelocity(Rear_left_speed)
     Rear_right_wheel.setVelocity(Rear_right_speed)

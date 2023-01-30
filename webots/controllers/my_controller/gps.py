@@ -1,38 +1,25 @@
 from controller import GPS
+from controller import Robot, Motor, PositionSensor
 
+# def stop(self):
+        
 
-class Gps_controller():
-    def __init__(self,robot) -> None:
-        self.gps =robot.getDevice('gps')
-        self.gps.enable(int(robot.getBasicTimeStep()))
+class Gps_controller(GPS):
+    def __init__(self,name, timestep) -> None:
+        super().__init__(name)
+        self.enable(int(timestep))
+        
+
     @property
     def position(self):
-        return self.gps.getValues()
+        return self.getValues()
+
+    # @property
+    # def coordinate_system(self) -> int:
+    #     return self.gps.getCoordinateSystem()
 
     def getCoordinates(self):
-        return self.gps.getValues()
-        
-    def controlgps(self):
-            
-        border={
-                "left":-3.5,
-                "right":3.5,
-                "front":3.5,
-                "back":-3.5
-        }
-        limit=0.3
+        return self.getValues()
 
-        Coordinates=self.getValues()
-        long=[]
-        test=False
-        for key,value in border.items():
-            long.append(abs(Coordinates[0]-border[key]))
-            long.append(abs(Coordinates[1]-border[key]))
-            
-        longs = min(long)
-        if(longs<limit):
-            print(True)
-            return True
-        else:
-            print(False)
-            return False
+    # @staticmethod
+    # def convertToDegreesMinutesSeconds(decimalDegree):
